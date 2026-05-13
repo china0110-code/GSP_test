@@ -1,20 +1,13 @@
 
-# AI Ready Analyzer
+# 修正内容
 
-GitHub Pages対応の静的WEBアプリ。
+レーダーチャートが崩れる問題を修正。
 
-## 使い方
+## 変更方法
 
-1. index.html を開く
-2. 企業名と部署名を入力
-3. プロンプト生成
-4. ChatGPT等へ貼り付け
-5. JSONを戻して解析
+既存の:
 
-## GitHub Pages公開
+- app.js
+- style.css
 
-- このフォルダをGitHubへpush
-- Settings → Pages → Deploy from branch
-- main / root を選択
-
-完了。
+へ内容を追記または置換してください。
