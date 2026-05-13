@@ -1,0 +1,35 @@
+
+{
+  "company": "日立製作所",
+  "department": "経理部",
+  "summary": {
+    "overall_ai_score": 72
+  },
+  "tasks": [
+    {
+      "task_name": "請求書処理",
+      "description": "請求書の確認、入力、照合",
+      "automation_score": 95,
+      "roi_score": 90,
+      "difficulty_score": 25,
+      "standardization_score": 92,
+      "recommended_ai_tools": [
+        "OCR",
+        "RPA",
+        "Copilot"
+      ]
+    },
+    {
+      "task_name": "月次決算",
+      "description": "月次決算資料の作成と確認",
+      "automation_score": 60,
+      "roi_score": 75,
+      "difficulty_score": 55,
+      "standardization_score": 70,
+      "recommended_ai_tools": [
+        "Excel AI",
+        "BI"
+      ]
+    }
+  ]
+}
