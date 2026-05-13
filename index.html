@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI導入効果シミュレーター | AI Task Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for Radar Chart (Free CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI導入効果シミュレーター</h1>
+            <p class="subtitle">部署名から想定業務を抽出し、10の指標でAI適正を診断します</p>
+        </header>
+
+        <section class="search-box">
+            <div class="input-group">
+                <label for="companyName">企業名</label>
+                <input type="text" id="companyName" placeholder="例：サンプル株式会社">
+            </div>
+            <div class="input-group">
+                <label for="deptName">部署名（部・課）</label>
+                <input type="text" id="deptName" placeholder="例：人事部 採用課">
+            </div>
+            <button id="analyzeBtn">業務リストを生成・分析</button>
+        </section>
+
+        <section id="resultSection" class="hidden">
+            <div class="result-header">
+                <h2 id="displayTitle">分析結果</h2>
+                <div class="legend">
+                    <span class="dot high"></span> 導入効果：高 (70点〜)
+                    <span class="dot mid"></span> 中 (40〜69点)
+                    <span class="dot low"></span> 低 (〜39点)
+                </div>
+            </div>
+            <div id="taskGrid" class="task-grid">
+                <!-- Task cards will be injected here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for Detailed Analysis -->
+    <div id="detailModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+                <div class="info-container">
+                    <h3 id="modalTaskName">業務名</h3>
+                    <div class="total-score-box">
+                        <span class="label">総合AI導入効果度</span>
+                        <span id="modalTotalScore" class="score-value">0</span>
+                        <span class="unit">/ 100</span>
+                    </div>
+                    <div id="axisDetails" class="axis-list">
+                        <!-- Score per axis will be listed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
